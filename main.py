@@ -1,6 +1,25 @@
+def main():
+    while True:
+        print("\n=== MAIN MENU ===")
+        print("1. Smart Calculator")
+        print("2. Guess the Number Game")
+        print("3. Exit")
+
+        choice = input("Choose an option (1/2/3): ")
+
+        if choice == '1':
+            Smart_Calculator()
+        elif choice == '2':
+            guess_number()
+        elif choice == '3':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please select 1, 2, or 3.")
+#-----------------------------SMART CALCULATOR-------------------------------------
+#DEFINING FUNCTION
 def Smart_Calculator():
     print("Welcome to the Smart Calculator")
-    
     while True:
         print("\n--- Calculator ---")
         print("1. Add")
@@ -8,18 +27,13 @@ def Smart_Calculator():
         print("3. Multiply")
         print("4. Divide")
         print("5. Exit")
-        
         choice = input("Enter your choice (1-5): ")
-        
         if choice == '5':
             print("Exiting...")
             break
-            
         if choice in ('1', '2', '3', '4'):
-         
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
-            
             if choice == '1':
                 print("Result:", num1 + num2)
             elif choice == '2':
@@ -34,8 +48,7 @@ def Smart_Calculator():
         else:
             print("Invalid choice, please try again.")
 
-Smart_Calculator()
-
+#---------------------------GUESSING NUMBER GAME---------------------------------
 
 #DEFINING FUNCTION
 import random
@@ -66,19 +79,8 @@ def guess_number():
         if again != 'y':
             print("Thanks for playing!")
             break
-#CALLING FUNCTION
-guess_number()
-
-
-def main():
-    print("1. Smart Calculator")
-    print("2. Guessing Game")
-    choice = input("Choose option: ")
-    if choice == "1":
-        Smart_Calculator()
-    elif choice == "2":
-        guessing_game()
-    else:
-        print("Invalid choice")
-
 main()
+
+#-----------------------------USER FRIENDLY OUTPUT--------------------------
+
+#----------------------------------END-----------------------------------
